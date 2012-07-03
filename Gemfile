@@ -1,6 +1,6 @@
 source 'http://rubygems.org/'
 
-gem 'broach', '~>0.2.1'
+gem 'tinder'
 
 group :test do
   gem 'mocha', '~>0.9.10'

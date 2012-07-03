@@ -1,4 +1,4 @@
-require 'broach'
+require 'tinder'
 
 unless defined?(BuilderPlugin)
   # Define a dummy Plugin class if not already available
@@ -31,12 +31,8 @@ class CampfireNotifier < BuilderPlugin
     return unless self.enabled?
 
     CruiseControl::Log.debug("Campfire notifier: connecting to campfire")
-    Broach.settings = {
-      'account' => account,
-      'token' => token,
-      'use_ssl' => ssl
-    }
-    return Broach::Room.find_by_name(room)
+    campfire = Tinder::Campfire.new account, :token => token
+    campfire.find_room_by_name(room)
   end
 
   def build_finished(build)
