@@ -70,7 +70,7 @@ class CampfireNotifier < BuilderPlugin
 
     begin
       client_room = self.connect
-    rescue Broach::AuthenticationError => e
+    rescue Tinder::AuthenticationFailed => e
       raise "Campfire Connection Error: #{e.message}"
     end
 
