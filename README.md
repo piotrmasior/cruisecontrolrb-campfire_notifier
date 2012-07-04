@@ -16,6 +16,10 @@ finishes. By default, it will alert the room when a build is: FIXED (was
 previously failing, now passing), BROKEN (was previously passing, now failing),
 SUCCESS and FAILED.
 
+#Variation
+
+I was unsuccessful with setting up this plugin (all possible variants) so I decided to fall back fro broach to tinder with little API call update
+
 ## Installation
 
 ### Getting the Software
@@ -23,7 +27,7 @@ SUCCESS and FAILED.
 Clone this repo into a suitable directory:
 
     $ cd ~
-    $ git clone git://github.com/h3h/cruisecontrolrb-campfire_notifier.git
+    $ git clone git@github.com:piotrmasior/cruisecontrolrb-campfire_notifier.git
     $ cd cruisecontrolrb-campfire_notifier
 
 Install bundler if you don't already have it
